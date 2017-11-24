@@ -6,14 +6,16 @@
     entry: {
       app: './src/index.js'
     },
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].bundle.js',
+      chunkFilename: '[name].bundle.js',
+      publicPath: '/'
+    },
     plugins: [
-      new CleanWebpackPlugin(['dist']),
       new HtmlWebpackPlugin({
         title: 'Production'
-      })
-    ],
-    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist')
-    }
+      }),
+      new CleanWebpackPlugin(['./dist'])
+    ]
   };
