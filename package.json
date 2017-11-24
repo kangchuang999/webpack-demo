@@ -4,7 +4,7 @@
   "description": "demo",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --color --config webpack.dev.js",
+    "dev": "webpack --progress --color --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
     "start": "webpack --config webpack.config.js",
